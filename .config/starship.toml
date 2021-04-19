@@ -3,7 +3,7 @@
 add_newline = false
 
 format = """\
-  $username\
+  $time\
   $hostname\
   $directory\
   $git_branch\
@@ -15,10 +15,12 @@ format = """\
   $line_break\
   $jobs\
   $battery\
-  $time\
   $character\
   """
 #
+
+[hostname]
+format = "on 💻 [$hostname]($style) "
 
 [nodejs]
 disabled = true
