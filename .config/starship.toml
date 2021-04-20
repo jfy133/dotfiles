@@ -5,6 +5,7 @@ add_newline = false
 format = """\
   $time\
   $hostname\
+  $memory_usage\
   $directory\
   $git_branch\
   $git_commit\
@@ -15,6 +16,7 @@ format = """\
   $line_break\
   $jobs\
   $battery\
+  $conda\
   $character\
   """
 #
@@ -30,7 +32,7 @@ full_symbol = "🔋"
 charging_symbol = "🔌"
 discharging_symbol = "⚡"
 
-[[battery.display]]
+[battery.display]
 threshold = 30
 style = "bold red"
 
@@ -51,7 +53,7 @@ disabled = true
 [memory_usage]
 disabled=false
 threshold=20
-format = " 🐏 [${ram}]($style) "
+format = " with 🐏 [${ram}]($style) "
 
 [time]
 disabled = false
