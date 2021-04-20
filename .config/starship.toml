@@ -22,7 +22,7 @@ format = """\
 #
 
 [hostname]
-format = "on 💻 [$hostname]($style) "
+format = "on [$hostname]($style) "
 
 [nodejs]
 disabled = true
@@ -41,11 +41,11 @@ error_symbol = "[✖](bold red) "
 
 [cmd_duration]
 min_time = 10_000  # Show command duration over 10,000 milliseconds (=10 sec)
-format = " took [$duration]($style) "
+format = "took [$duration]($style) "
 
 [directory]
-truncation_length = 5
-format = "[$path]($style)[$lock_symbol]($lock_style) "
+truncation_length = 2
+format = "in [$path]($style)[$lock_symbol]($lock_style) "
 
 [line_break]
 disabled = true
@@ -53,8 +53,8 @@ disabled = true
 [memory_usage]
 disabled=false
 threshold=20
-format = " with 🐏 [${ram}]($style) "
+format = "with [${ram}]($style) "
 
 [time]
 disabled = false
-format = "🕙 [$time]($style) "
+format = "🧬[$time]($style) "
