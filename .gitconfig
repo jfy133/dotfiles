@@ -1,0 +1,9 @@
+[user]
+	name = James Fellows Yates
+	email = jfy133@gmail.com
+[core]
+	editor = vim
+[color]
+	ui = true
+[credential]
+	helper = cache
