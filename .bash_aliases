@@ -23,6 +23,16 @@ alias sj='scontrol show jobid -dd'
 alias si='sinfo --format "%P %.5a %.10l %.6D %.c %.m %.6t %N"'
 alias islurm="srun -c 8 --mem 32000 -t 0-01:59 -p interactive --pty -u bash -i"
 
+slo() {
+  cat ~/slurm_logs/slurm."$1".out
+}
+
+sle() {
+  cat ~/slurm_logs/slurm."$1".err
+}
+
+
+
 ## view stuff in readable format
 alias view_csv='column -s, -t'
 alias view_tsv='column -s $'\t' -t'
