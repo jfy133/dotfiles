@@ -31,7 +31,14 @@ sle() {
   cat ~/slurm_logs/slurm."$1".err
 }
 
+# SGE stuff
+qlo() {
+  cat ~/sge_logs/*.o"$1"
+}
 
+qle() {
+  cat ~/sge_logs/*.e"$1"
+}
 
 ## view stuff in readable format
 alias view_csv='column -s, -t'
