@@ -40,6 +40,8 @@ qle() {
   cat ~/sge_logs/*.e"$1"
 }
 
+alias qw="watch 'qstat'"
+
 ## view stuff in readable format
 alias view_csv='column -s, -t'
 alias view_tsv='column -s $'\t' -t'
