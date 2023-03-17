@@ -1,0 +1,51 @@
+## add to .bashrc
+# if [ -f ~/.bash_aliases ]; then
+#     . ~/.bash_aliases
+# fi
+
+
+## some more ls aliases
+alias ll='ls -alFh'
+alias la='ls -A'
+alias l='ls -CF'
+
+## fast reversing
+alias up="cd .."
+alias upp="cd ../.."
+alias uppp="cd ../../.."
+
+## slurm stuff
+alias sq='squeue -o "%A %.18i %.9P %.20j %.8u %.2t %.10M %.3C %.m %R"'
+alias squ='squeue -u $USER -o "%A %.18i %.9P %.20j %.8u %.2t %.10M %.3C %.m %R"'
+alias sqw="watch 'squeue -u $USER \"-o %A %.18i %.9P %.20j %.8u %.2t %.10M %.3C %.m %R\"'"
+alias sa='sacct --format="JobID,JobName%20, Partition,NodeList,AllocCPUS,Elapsed,MaxVMSize,State,End,ExitCode" 2>/dev/null'
+alias sj='scontrol show jobid -dd'
+alias si='sinfo --format "%P %.5a %.10l %.6D %.c %.m %.6t %N"'
+alias islurm="srun -c 8 --mem 32000 -t 0-01:59 -p interactive --pty -u bash -i"
+
+slo() {
+  cat ~/slurm_logs/slurm."$1".out
+}
+
+sle() {
+  cat ~/slurm_logs/slurm."$1".err
+}
+
+# SGE stuff
+qlo() {
+  cat ~/sge_logs/*.o"$1"
+}
+
+qle() {
+  cat ~/sge_logs/*.e"$1"
+}
+
+alias qw="watch 'qstat'"
+
+## view stuff in readable format
+alias view_csv='column -s, -t'
+alias view_tsv='column -s $'\t' -t'
+alias view_xml="sed 's/></>\n</g'"
+
+# view big trees
+alias ltree='tree --du -h -C | less -R'
