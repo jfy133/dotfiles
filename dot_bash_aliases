@@ -52,3 +52,6 @@ alias ltree='tree --du -h -C | less -R'
 
 ## fake singularity
 alias singularity='apptainer'
+
+## nextflow console window in light mode
+alias nf-console "env GTK_THEME=4CLIX-LG nextflow console"
