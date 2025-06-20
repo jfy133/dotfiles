@@ -41,6 +41,9 @@ qle() {
 }
 
 alias qw="watch 'qstat'"
+alias qsu="qstat -u james_fellows_yates"
+alias qs="qstat"
+alias qwu="watch 'qstat -u james_fellows_yates'"
 
 ## view stuff in readable format
 alias view_csv='column -s, -t'
