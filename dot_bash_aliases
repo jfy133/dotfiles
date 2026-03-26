@@ -21,6 +21,7 @@ alias sqw="watch 'squeue -u $USER \"-o %A %.18i %.9P %.50j %.8u %.2t %.10M %.3C 
 alias sa='sacct --format="JobID,JobName%50, Partition,NodeList,AllocCPUS,Elapsed,MaxVMSize,State,End,ExitCode" 2>/dev/null | column -t'
 alias sj='scontrol show jobid -dd'
 alias si='sinfo -e --format "%P %.5a %.10l %.6D %.c %.m %.6t %N" | column -t'
+alias sil='sinfo -N -e --format "%P %.5a %.10l %.6D %.c %.m %.6t %N" | column -t | sort -k 6 -r'
 alias islurm="srun -c 8 --mem 32000 -t 0-01:59 -p interactive --pty -u bash -i"
 
 slo() {
